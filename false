@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20200627015650_change_completed_default_to_false.rb
