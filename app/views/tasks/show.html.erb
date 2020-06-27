@@ -1,0 +1,20 @@
+<div class="row mt-3">
+  <div class="col text-center mb-3">
+    <div class="row justify-content-around">
+      <h1><%= @task.title %></h1>
+      <button class="btn btn-warning"><%= link_to 'Edit this task', edit_path %></button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col mb-1">
+    <div>
+      <%= @task.details %>
+    </div>
+
+    <input type="checkbox" <%= 'checked' if @task.completed %>>
+    <label class="mt-3" for="task-<%= @task.id %>"><%= @message %></label>
+    <br>
+    <%= link_to 'Back to list', tasks_path %>
+  </div>
+</div>

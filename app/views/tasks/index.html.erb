@@ -1,0 +1,24 @@
+<div class="row mt-3">
+  <div class="col">
+    <div class="row justify-content-center mb-3">
+      <h1>My Tasks</h1>
+    </div>
+  <% @tasks.each do |task| %>
+    <div class="task row justify-content-between" id="task-<%= task.id %>">
+      <div class="col task-info mb-1">
+        <input type="checkbox" <%= 'checked' if task.completed %>>
+        <label for="<%= task.title %>"><%= link_to task.title, task_path(task) %></label>
+      </div>
+      <div class="col text-right">
+        <%= link_to 'Delete',
+                    task_path(task),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <%= link_to 'Add a new task', new_path %>
+  </div>
+  </div>
+</div>

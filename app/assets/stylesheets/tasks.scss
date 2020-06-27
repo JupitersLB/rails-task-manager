@@ -1,0 +1,30 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+$gray: #e8e4e1;
+
+html {
+  height: 100vh;
+  background-color: lightgray;
+}
+
+body {
+  background: lightgray;
+}
+
+.task {
+  height: 40px;
+  background-color: $gray;
+  border: 1px solid white;
+  align-items: center;
+  label {
+    margin: 0;
+  }
+  &:hover {
+    background-color: darkgray;
+  }
+}
+
+.task-info {
+  vertical-align: middle;
+}

@@ -1,0 +1,12 @@
+<div class="row mt-5 ">
+  <div class="col justify-content-center">
+    <h1 class="mb-3">Add a task</h1>
+    <%= simple_form_for(@task) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :details %>
+      <%= f.submit %>
+    <% end %>
+    <br>
+    <%= link_to 'Back to list', tasks_path %>
+  </div>
+</div>
